@@ -20,7 +20,7 @@ output "node_group_arn" {
 
 output "node_group_name" {
   description = "Name of the EKS managed node group"
-  value = module.eks.eks_managed_node_groups["eks_nodes"].id
+  value = module.eks.eks_managed_node_groups["eks_nodes"].arn
 
 
 }
