@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloudwatch-agent-config
+  namespace: amazon-cloudwatch
+data:
+  cwagentconfig.json: |
+    {
+      "logs": {
+        "metrics_collected": {
+          "kubernetes": {
+            "metrics_collection_interval": 60
+          }
+        },
+        "log_group_name": "/aws/containerinsights/my-eks-cluster/application",
+        "log_stream_name": "{instance_id}",
+        "log_group_retention_in_days": 7
+      }
+    }
