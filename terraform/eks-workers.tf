@@ -1,6 +1,6 @@
 resource "aws_eks_node_group" "workers" {
   cluster_name  = aws_eks_cluster.eks_cluster.name
-  node_role_arn = aws_iam_role.eks_node.arn
+  node_role_arn = aws_iam_role.eks_node_role.arn
   subnet_ids    = [aws_subnet.private_subnet.id]
   instance_types = [var.instance_type]
   scaling_config {
