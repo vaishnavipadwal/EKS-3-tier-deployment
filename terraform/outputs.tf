@@ -1,23 +1,24 @@
 output "vpc_id" {
-  value = aws_vpc.main_vpc.id
+  description = "VPC ID"
+  value       = aws_vpc.eks_vpc.id
 }
 
-output "subnet_1_id" {
-  value = aws_subnet.private_subnet_1.id
-}
-
-output "subnet_2_id" {
-  value = aws_subnet.private_subnet_2.id
-}
-
-output "eks_cluster_id" {
-  value = aws_eks_cluster.eks_cluster.id
+output "eks_cluster_name" {
+  description = "EKS Cluster Name"
+  value       = aws_eks_cluster.eks_cluster.name
 }
 
 output "eks_cluster_endpoint" {
-  value = aws_eks_cluster.eks_cluster.endpoint
+  description = "EKS Cluster API Endpoint"
+  value       = aws_eks_cluster.eks_cluster.endpoint
 }
 
-output "eks_cluster_certificate_authority" {
-  value = aws_eks_cluster.eks_cluster.certificate_authority[0].data
+output "eks_cluster_security_group_id" {
+  description = "Security group ID for the EKS cluster"
+  value       = aws_security_group.eks_sg.id
+}
+
+output "eks_node_role_arn" {
+  description = "ARN of the EKS node IAM role"
+  value       = aws_iam_role.eks_node_role.arn
 }
