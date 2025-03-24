@@ -7,7 +7,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "your-terraform-state-bucket"
+    bucket         = "eks-3-tier-pro"
     key            = "eks/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
