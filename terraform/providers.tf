@@ -10,7 +10,7 @@ terraform {
     bucket         = "eks-3-tier-pro"  # Use your existing bucket name
     key            = "terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "terraform-lock-table"
+    dynamodb_table = "eks-3-tier-pro-database"
   }
 
 }
