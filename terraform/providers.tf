@@ -11,7 +11,7 @@ terraform {
     key            = "eks/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
-    dynamodb_table = "your-terraform-lock-table"
+    dynamodb_table = "eks-3-tier-pro-database"
   }
 }
 
