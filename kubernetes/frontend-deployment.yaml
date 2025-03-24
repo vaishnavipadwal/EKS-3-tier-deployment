@@ -13,7 +13,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
-        image: myfrontendimage:latest
-        ports:
-        - containerPort: 80
+        - name: frontend
+          image: my-frontend-image
+          ports:
+            - containerPort: 80
