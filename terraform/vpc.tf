@@ -8,7 +8,7 @@ resource "aws_vpc" "eks_vpc" {
 
 resource "aws_subnet" "private_subnet_1" {
   vpc_id                  = aws_vpc.eks_vpc.id
-  cidr_block              = var.subnet_cidrs[0]
+  cidr_block              = "10.0.3.0/24"
   availability_zone       = "us-east-1a"
   map_public_ip_on_launch = false
 
@@ -19,7 +19,7 @@ resource "aws_subnet" "private_subnet_1" {
 
 resource "aws_subnet" "private_subnet_2" {
   vpc_id                  = aws_vpc.eks_vpc.id
-  cidr_block              = var.subnet_cidrs[1]
+  cidr_block              = "10.0.4.0/24"
   availability_zone       = "us-east-1b"
   map_public_ip_on_launch = false
 

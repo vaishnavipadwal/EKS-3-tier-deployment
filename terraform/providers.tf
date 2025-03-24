@@ -7,12 +7,12 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "eks-3-tier-pro"
-    key            = "eks/terraform.tfstate"
+    bucket         = "eks-3-tier-pro"  # Use your existing bucket name
+    key            = "terraform.tfstate"
     region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "eks-3-tier-pro-database"
+    dynamodb_table = "terraform-lock-table"
   }
+
 }
 
 provider "aws" {
